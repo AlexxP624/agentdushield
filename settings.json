@@ -1,0 +1,576 @@
+{
+    "website": {
+        "name": "AlexxBot",
+        "avatar": "https://cdn.discordapp.com/attachments/685418213760040971/688330424581095474/unknown.png",
+        "invite": "https://discord.gg/dm9SZrk",
+        "botinvite": "https://discord.com/api/oauth2/authorize?client_id=692350026139303937&permissions=8&scope=bot",
+        "botinvite2": "https://discord.com/oauth2/authorize?client_id=825411092607795242&permissions=8&scope=bot"
+    },
+
+    "commands" : {
+        "Fun": [{
+            "name": "ping",
+            "category": "Fun",
+            "description": "Permet de affiché ton ping.",
+            "permissions": "Pas besoin de permissions.",
+            "usage": ".ping"
+        }, {
+          "name": "8ball",
+          "category": "Fun",
+          "description": "Tu poses une question et le bot te répond.",
+          "permissions": "Pas besoin de permissions.",
+          "usage": ".8ball <question>"
+        }, {
+          "name": "calc",
+          "category": "Fun",
+          "description": "Permet de faire des calcules.",
+          "permissions": "Pas besoin de permissions.",
+          "usage": ".calc"
+        }, {
+          "name": "say",
+          "category": "Fun",
+          "description": "Le bot écrit la phrase que tu as demandé.",
+          "permissions": "Pas besoin de permissions.",
+          "usage": ".say <message> | .say embed <message>"
+        }, {
+          "name": "love",
+          "category": "Fun",
+          "description": "Permet de voir ton amour face à un autre membre ♥.",
+          "permissions": "Pas besoin de permissions.",
+          "usage": ".love | .love <@user>"
+        }, {
+          "name": "meme",
+          "category": "Fun",
+          "description": "Permet de voir des memes",
+          "permissions": "Pas besoin de permissions.",
+          "usage": ".meme"
+        }, {
+          "name": "customembed",
+          "category": "Fun",
+          "description": "Permet de faire des embeds custom.",
+          "permissions": "Pas besoin de permissions.",
+          "usage": ".customembed <titre> <description>"
+        }, {
+          "name": "weather",
+          "category": "Fun",
+          "description": "Permet de voir la températures sur la ville dis.",
+          "permissions": "Pas besoin de permissions.",
+          "usage": ".weather <ville>"
+        }, {
+          "name": "shorten",
+          "category": "Fun",
+          "description": "Permet de faire des liens personalisé. Ex : youtube.com kuku -> kuku.",
+          "permissions": "Pas besoin de permissions.",
+          "usage": ".shorten <lien> <titre>"
+        }, {
+          "name": "binary",
+          "category": "Fun",
+          "description": "Permet de faire un phrase en binaire et de traduire le binaire.",
+          "permissions": "Pas besoin de permissions.",
+          "usage": ".binary <encode/decode> <message>"
+        }, {
+          "name": "messages",
+          "category": "Fun",
+          "description": "Affiche votre nombre de message global et le nombre de messages qui à eu dans le serveur.",
+          "permissions": "Pas besoin de permissions.",
+          "usage": ".messages"
+        }, {
+          "name": "text-art",
+          "category": "Fun",
+          "description": "Permet de faire un text stylé.",
+          "permissions": "Pas besoin de permissions.",
+          "usage": ".text-art <message>"
+        }, {
+          "name": "translate",
+          "category": "Fun",
+          "description": "Permet de traduire du text dans langue que vous voulez.",
+          "permissions": "Pas besoin de permissions.",
+          "usage": ".translate <ISO> <text> ex ISO : en --> **Anglais**. fr --> **Français**."
+        }, {
+          "name": "status",
+          "category": "Fun",
+          "description": "Permet de voir votre status, ce que vous avez mis, ce que vous jouez, quelle musique vous écoutez sur Spotify.",
+          "permissions": "Pas besoin de permissions.",
+          "usage": ".status | .status <@user>"
+        }, {
+          "name": "tweet",
+          "category": "Fun",
+          "description": "Permet de faire un faut tweet sur une image.",
+          "permissions": "Pas besoin de permissions.",
+          "usage": ".tweet <nom> <text>."
+        }],
+        "Musique": [{
+            "name": "play",
+            "category": "Musique",
+            "description": "Permet de mettre une musique.",
+            "permissions": "Pas besoin de permissions.",
+            "usage": ".play <nom de la musique>"
+        }, {
+          "name": "stop",
+            "category": "Musique",
+            "description": "Permet de faire quitté le bot de la vocal.",
+            "permissions": "Pas besoin de permissions.",
+            "usage": ".stop"
+        }, {
+          "name": "queue",
+            "category": "Musique",
+            "description": "Permet de voir la file d'attente sur le serveur.",
+            "permissions": "Pas besoin de permissions.",
+            "usage": ".queue"
+        }, {
+          "name": "skip",
+            "category": "Musique",
+            "description": "Permet de passé une musique.",
+            "permissions": "Pas besoin de permissions.",
+            "usage": ".skip"
+        }, {
+          "name": "loop",
+            "category": "Musique",
+            "description": "Permet de rejoué la musique en cours idéfiniment.",
+            "permissions": "Pas besoin de permissions.",
+            "usage": ".loop"
+        }, {
+          "name": "pause",
+            "category": "Musique",
+            "description": "Permet de mettre en pause une musique.",
+            "permissions": "Pas besoin de permissions.",
+            "usage": ".pause"
+        }, {
+          "name": "resume",
+            "category": "Musique",
+            "description": "Permet de remettre la musique en pause.",
+            "permissions": "Pas besoin de permissions.",
+            "usage": ".resume"
+        }, {
+          "name": "volume",
+            "category": "Musique",
+            "description": "Permet de augmenté le volume ou baisser le volume de la musique.",
+            "permissions": "Pas besoin de permissions.",
+            "usage": ".volume <nombre>"
+        }, {
+          "name": "np",
+            "category": "Musique",
+            "description": "Permet de voir la musique en cour.",
+            "permissions": "Pas besoin de permissions.",
+            "usage": ".np"
+        }, {
+          "name": "lyrics",
+            "category": "Musique",
+            "description": "Permet de voir les paroles d'une musique.",
+            "permissions": "Pas besoin de permissions.",
+            "usage": ".lyrics"
+        }],
+        "Economie": [{
+          "name": "rank",
+            "category": "Economie",
+            "description": "Permet de affiché ton niveau sur le serveur.",
+            "permissions": "Pas besoin de permissions.",
+            "usage": ".rank"
+        }, {
+          "name": "addlevel",
+            "category": "Economie",
+            "description": "Permet de ajouté un level à un utilisteur.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".addlevel @user <nombre>"
+        }, {
+          "name": "addxp",
+            "category": "Economie",
+            "description": "Permet de ajouté de l'xp à un utilisateur.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".addxp @user <nombre>"
+        }, {
+          "name": "removelevel",
+            "category": "Economie",        
+            "description": "Permet de supprimer un level à un utilisateur.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".removelevel @user <nombre>"
+        }, {
+          "name": "removexp",
+            "category": "Economie",
+            "description": "Permet de supprimer de l'xp à un utilisateur.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".removexp @user <nombre>"
+        }, {
+          "name": "leaderboard",
+            "category": "Economie",
+            "description": "Permet de voir le classements des levels sur le serveur.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".leaderboard"
+        }, {
+          "name": "setColorRank",
+            "category": "Economie",
+            "description": "Permet de mettre une autres couleur à la barre de progression du rank.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".setColorRank <COULEUR>/<#couleur> ex: .setColorRank BLUE ou .setColorRank #ff0000"
+        }],
+        "Utile": [{
+            "name": "serveurinfo",
+            "category": "Utile",
+            "description": "Permet de affiché les information du serveur.",
+            "permissions": "Pas besoin de permissions.",
+            "usage": ".serveurinfo"
+        }, {
+          "name": "userinfo",
+            "category": "Utile",
+            "description": "Permet de affiché les information de la personne mentionné.",
+            "permissions": "Pas besoin de permissions.",
+            "usage": ".userinfo | .userinfo <@user>"
+        }, {
+          "name": "invites",
+            "category": "Utile",
+            "description": "Permet de affiché les invitation du membre.",
+            "permissions": "Pas besoin de permissions.",
+            "usage": ".invites | .invites <@user>"
+        }, {
+          "name": "report",
+            "category": "Utile",
+            "description": "Permet de report un utilisateur.",
+            "permissions": "Pas besoin de permissions.",
+            "usage": ".report <@user> <raison>"
+        }, {
+          "name": "uptime",
+            "category": "Utile",
+            "description": "Permet de affiché depuis quand le bot est online.",
+            "permissions": "Pas besoin de permissions.",
+            "usage": ".uptime"
+        }],
+        "Important": [{
+            "name": "invitebot",
+            "category": "Important",
+            "description": "Permet de invité le bot discord sur ton serveur.",
+            "permissions": "Pas besoin de permissions.",
+            "usage": ".invitebot"
+        }, {
+          "name": "site",
+            "category": "Important",
+            "description": "Permet de voir le site officiel de AlexxBot.",
+            "permissions": "Pas besoin de permissions.",
+            "usage": ".site"
+        },{
+          "name": "serveur",
+            "category": "Important",
+            "description": "Permet de venir sur le serveur officiel de AlexxBot.",
+            "permissions": "Pas besoin de permissions.",
+            "usage": ".serveur"
+        }, {
+          "name": "youtube",
+            "category": "Important",
+            "description": "Permet de affiché ma chaine YouTube.",
+            "permissions": "Pas besoin de permissions.",
+            "usage": ".youtube"
+        }, {
+          "name": "botinfo",
+            "category": "Important",
+            "description": "Permet de affiché les information de AlexxBot.",
+            "permissions": "Pas besoin de permissions.",
+            "usage": ".botinfo"
+        }, {
+          "name": "channelinfo",
+          "category": "Fun",
+          "description": "Permet de voir les informations du salon.",
+          "permissions": "Pas besoin de permissions.",
+          "usage": ".channelinfo | .channelinfo #channel | .channelinfo <id>."
+        }, {
+          "name": "roleinfo",
+          "category": "Fun",
+          "description": "Permet de voir les informations sur un rôle.",
+          "permissions": "Pas besoin de permissions.",
+          "usage": ".roleinfo <@role>."
+        }, {
+          "name": "ticket",
+          "category": "Fun",
+          "description": "Permet de créé un ticket si vous avez un problème dans votre serveur.",
+          "permissions": "Pas besoin de permissions.",
+          "usage": ".ticket."
+        }],
+        "Modération": [{
+            "name": "clear",
+            "category": "Modération",
+            "description": "Permet de supprimer des messages en grande quantité.",
+            "permissions": ["MANAGE_MESSAGES"],
+            "usage": ".clear <nombre>"
+        }, {
+          "name": "poll",
+            "category": "Utile",
+            "description": "Permet de faire un sondage.",
+            "permissions": ["MANAGE_MESSAGES"],
+            "usage": ".serveurinfo"
+        }, {
+          "name": "kick",
+            "category": "Modération",
+            "description": "Permet de exclure une personne du serveur.",
+            "permissions": ["KICK_MEMBERS"],
+            "usage": ".kick <@user>"
+        }, {
+          "name": "ban",
+            "category": "Modération",
+            "description": "Permet de bannir une personne du serveur.",
+            "permissions": ["BAN_MEMBERS"],
+            "usage": ".ban <@user> <raison>"
+        }, {
+          "name": "unban",
+            "category": "Modération",
+            "description": "Permet de unbannir une personne qui était sur le serveur.",
+            "permissions": ["BAN_MEMBERS"],
+            "usage": ".unban <id>"
+        }, {
+          "name": "warn",
+            "category": "Modération",
+            "description": "Permet de mettre un avertissement à un utilisateur.",
+            "permissions": ["MANAGE_MESSAGES"],
+            "usage": ".warn <@user> <raison>"
+        }, {
+          "name": "unwarn",
+            "category": "Modération",
+            "description": "Permet de retirer un avertissement à un utilisateur.",
+            "permissions": ["MANAGE_MESSAGES"],
+            "usage": ".unwarn <@user> <nombre>"
+        }, {
+          "name": "warnings",
+            "category": "Modération",
+            "description": "Permet de voir les warns de la personnes mentionner.",
+            "permissions": ["VIEW_AUDIT_LOG"],
+            "usage": ".warnings <@user>"
+        }, {
+          "name": "addrole",
+            "category": "Modération",
+            "description": "Permet de ajouté un rôle à un utilisateur.",
+            "permissions": ["MANAGE_ROLES"],
+            "usage": ".addrole <@user> <@role> <raison>"
+        }, {
+          "name": "removerole",
+            "category": "Modération",
+            "description": "Permet de retiré un rôle à un utilisateur.",
+            "permissions": ["MANAGE_ROLES"],
+            "usage": ".removerole <@user> <@role> <raison>"
+        }, {
+          "name": "rolecreate",
+            "category": "Modération",
+            "description": "Permet de créé un role.",
+            "permissions": ["MANAGE_ROLES"],
+            "usage": ".rolecreate <nom du role> | .rolecreate <nom du role> <couleur>"
+        }, {
+          "name": "roledelete",
+            "category": "Modération",
+            "description": "Permet de supprimé un role.",
+            "permissions": ["MANAGE_ROLES"],
+            "usage": ".roledelete <nom du role>"
+        }, {
+          "name": "mute",
+            "category": "Modération",
+            "description": "Permet de mute un utilisateur.",
+            "permissions": ["MUTE_MEMBERS"],
+            "usage": ".mute <@user> | .mute <@user> <raison>"
+        }, {
+          "name": "unmute",
+            "category": "Modération",
+            "description": "Permet de unmute un utilisateur.",
+            "permissions": ["MUTE_MEMBERS"],
+            "usage": ".unmute <@user>"
+        }, {
+          "name": "tempmute",
+            "category": "Modération",
+            "description": "Permet de tempmute un utilisateur.",
+            "permissions": ["MUTE_MEMBERS"],
+            "usage": ".tempmute <@user> <temps>"
+        }, {
+          "name": "createchannel",
+            "category": "Modération",
+            "description": "Permet de créé un salon.",
+            "permissions": ["MANAGE_CHANNELS"],
+            "usage": ".createchannel <nom du salon>"
+        }, {
+          "name": "deletechannel",
+            "category": "Modération",
+            "description": "Permet de supprimé un salon.",
+            "permissions": ["MANAGE_CHANNELS"],
+            "usage": ".deletechannel <nom du salon>"
+        }, {
+          "name": "slowmode",
+            "category": "Modération",
+            "description": "Permet de mettre en slowmode un salon.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".slowmode <nom du salon> <temps> | .slowmode <temps>"
+        }, {
+          "name": "slowmode off",
+            "category": "Modération",
+            "description": "Permet de enlevé en slowmode un salon.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".slowmode off"
+        }, {
+          "name": "snipe",
+            "category": "Modération",
+            "description": "Permet de voir le dernier message supprimé du salon.",
+            "permissions": ["MANAGE_MESSAGES"],
+            "usage": ".snipe"
+        }, {
+          "name": "giveaway",
+          "category": "Modération",
+          "description": "Permet de faire un giveaway !",
+          "permissions": ["ADMINISTRATOR"],
+          "usage": ".giveaway <temps> <winners> <prix>"
+        }],
+        "Configuration": [{
+            "name": "setPrefix",
+            "category": "Configuration",
+            "description": "Permet de mettre un prefix personnalisé.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".setPrefix <prefix>"
+        }, {
+            "name": "setWelcome",
+            "category": "Configuration",
+            "description": "Permet de mettre un messages de bienvenue dans le salon dit.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".setWelcome <#channel>"
+        }, {
+            "name": "setWelcomeOff",
+            "category": "Configuration",
+            "description": "Permet de désactivé les messages de bienvenue.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".setWelcomeOff"
+        }, {
+          "name": "setGoodbye",
+            "category": "Configuration",
+            "description": "Permet de mettre un messages de au-revoir dans le salon dit.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".setGoodbye <#channel>"
+        }, {
+          "name": "setGoodbyeOff",
+            "category": "Configuration",
+            "description": "Permet de désactivé les messages de au-revoir.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".setGoodbyeOff"
+        }, {
+          "name": "setEdit",
+            "category": "Configuration",
+            "description": "Si un message et modifié vous pourrais quand même voir l'anciens avant qu'il est modifié.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".setEdit <#channel>"
+        }, {
+          "name": "setEditOff",
+            "category": "Configuration",
+            "description": "Permet de désactivé les logs des messages modifié.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".setEditOff"
+        }, {
+          "name": "setDelete",
+            "category": "Configuration",
+            "description": "Permet de voir le message suppimé d'un utilisateur.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".setDelete <#channel>"
+        }, {
+          "name": "setDeleteOff",
+            "category": "Configuration",
+            "description": "Permet de désactivé les logs des messages supprimé.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".setDeleteOff"
+        }, {
+          "name": "setReport",
+            "category": "Configuration",
+            "description": "Permet de envoyé un message report dans le salon defini.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".setReport <#channel>"
+        }, {
+          "name": "setReportOff",
+            "category": "Configuration",
+            "description": "Permet de désactivé les logs des messages de report.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".setReportOff"
+        }, {
+          "name": "setAntilink",
+            "category": "Configuration",
+            "description": "Permet de activé l'antilink.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".setAntilink"
+        }, {
+          "name": "setAntilinkOff",
+            "category": "Configuration",
+            "description": "Permet de désactivé l'antilink",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".setAntilinkOff"
+        }, {
+          "name": "setVoiceLog",
+            "category": "Configuration",
+            "description": "Permet de activé les logs si un membre rejoint un salon vocal ou le quitte.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".setVoiceLog"
+        }, {
+          "name": "setVoiceLogOff",
+            "category": "Configuration",
+            "description": "Permet de désactivé les logs un membre rejoint un salon vocal ou le quitte.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".setVoiceLogOff"
+        }, {
+          "name": "setAutorole",
+            "category": "Configuration",
+            "description": "Permet de mettre l'autorole sur un rôle précis.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".setAutorole"
+        }, {
+          "name": "setAutoroleOff",
+            "category": "Configuration",
+            "description": "Permet de désactivé l'autorole.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".setAutoroleOff"
+        }, {
+          "name": "setLevel",
+            "category": "Configuration",
+            "description": "Permet de mettre un message de levels up dans le salon dit.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".setLevel <#channel>"
+        }, {
+          "name": "setLevelOff",
+            "category": "Configuration",
+            "description": "Les messages de levels ne se envera plus dans le salon que vous aviez défini.",
+            "permissions": ["ADMINISTRATOR"],
+            "usage": ".setlevelOff"
+        }]
+    },
+    "autres": {
+      "Réseaux Sociaux": [{
+        "name": "YouTube",
+        "category": "Réseaux Sociaux",
+        "usage": "https://www.youtube.com/c/AlexxP62",
+        "message": "Clique sur moi pour voir ma chaîne YouTube",
+        "descriptions": "Voilà ma chaîne YouTube. Dessus je fais des tutos, je joue au jeux vidéos et autres..."
+      }, {
+        "name": "Twitter",
+        "category": "Réseaux Sociaux",
+        "usage": "https://twitter.com/AlexxP62",
+        "message": "Clique sur moi pour voir mon Twitter",
+        "descriptions": "Voilà mon Twitter. Je ne post pas énormement de chose, mais ça sera là aussi ou je ferais des tweets pour vous mettre à jour sur le bot !"
+      }, {
+        "name": "Instagram",
+        "category": "Réseaux Sociaux",
+        "usage": "https://www.instagram.com/alexlevlogeur/?hl=fr",
+        "message": "Clique sur moi pour voir mon compte Instagram",
+        "descriptions": "Voilà mon compte Instagram. Je ne post pas énormement de chose. Je post juste des photos drôle xd."
+      }, {
+        "name": "TikTok",
+        "category": "Réseaux Sociaux",
+        "usage": "https://www.tiktok.com/@alexlevlogeur?lang=fr",
+        "message": "Clique sur moi pour voir mon compte TikTok",
+        "descriptions": "Voilà mon compte TikTok. Je post jamais de TikToks mdr."
+      }],
+      "Autres Bots": [{
+        "name": "AlexxRank",
+        "category": "Autres Bots",
+        "descriptions": "AlexxRank permet juste de quand vous envoyer des messages vous gagnez de l'xp ! Il y a une fonctionnalité qui permet de choisir le salon que vous voulez pour envoyer les messages de levelup. Style de la rank card : canvacord !",
+        "status": "Status : ⚫ Hors Ligne",
+        "usage": "https://discord.com/oauth2/authorize?client_id=825411092607795242&permissions=8&scope=bot",
+        "message": "Clique sur moi pour inviter AlexxRank"
+      }, {
+        "name": "AlexxMusique",
+        "category": "Autres Bots",
+        "descriptions": "AlexxMusique permet juste de faire de la musique il y a comme exemple de commandes : ?loop, ?skip, ?remove... !",
+        "status": "Status : ⚫ Hors Ligne",
+        "usage": "https://discord.com/oauth2/authorize?client_id=814929054456610857&scope=bot&permissions=8",
+        "message": "Clique sur moi pour inviter AlexxMusique"
+      }],
+      "Informations": [{
+        "name": "Informations",
+        "category": "Informations",
+        "descriptions": "Nouveau Header !"
+      }]
+    }
+}
