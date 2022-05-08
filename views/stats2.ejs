@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Meta Tags-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        <link rel="stylesheet" href="/indexc.css">
+        <title><%= ez.name %> | Stats</title>
+        <link rel="shortcut icon" href="<%= ez.avatar %>">
+          </a>
+    </head>
+    <body>
+
+<%- include("./partials/header-profile") %>
+
+
+<div class="bg-grey text-dark text-center slide-up-fade-in" style="padding-top: 65px;">
+    <div class="p-5">
+        <div class="container">
+            <h1 class="mb-3">Statistiques du bot</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="padding-top: 20px; padding-bottom: 20px; ">
+<table class="table text-light slide-up-fade-in">
+    <thead class="thead text-center text-light mdb-color lighten-1 lighten-1 slide-up-fade-in">
+        <tr>
+          <th style="font-size: 20px;" scope="col">Type</th>
+          <th style="font-size: 20px;" scope="col">Data</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="text-center slide-up-fade-in">
+            <td style="font-size: 20px;"><i class="fas fa-users"></i> Utilisateurs</td>
+            <td style="font-size: 20px;"><%= bot.guilds.cache.map(g => g.memberCount).reduce((a, b) => a + b)%> </td>
+          </tr>
+          <tr class="text-center slide-up-fade-in">
+            <td style="font-size: 20px;"><i class="fas fa-server"></i> Serveurs</td>
+            <td style="font-size: 20px;"><%= bot.guilds.cache.size %></td>
+          </tr>
+          <tr class="text-center slide-up-fade-in">
+            <td style="font-size: 20px;"><i class="fas fa-hashtag"></i> Salons</td>
+            <td style="font-size: 20px;"><%= bot.channels.cache.size %> au total
+            <ul>
+            <li><%= bot.channels.cache.filter(c => c.type === 'text').size %>  Textuel  </li>
+            <li><%= bot.channels.cache.filter(c => c.type === 'voice').size %> Vocaux</li>
+            <li><%= bot.channels.cache.filter(c => c.type === 'category').size %> Catégories</td></li>
+            </ul>
+          </tr>
+          <tr class="text-center slide-up-fade-in">
+            <td style="font-size: 20px;"><i class="fas fa-laugh"></i> Emojis</td>
+            <td style="font-size: 20px;"><%= bot.emojis.cache.size %> au total
+            <ul>
+              <li><%= bot.emojis.cache.filter(e => e.animated === false).size %> Normal</li>
+              <li><%= bot.emojis.cache.filter(e => e.animated === true).size %> Animé</li>
+                </ul>
+          <tr>
+          <tr class="text-center slide-up-fade-in">
+            <td style="font-size: 20px;"><i class="fab fa-discord"></i> Uptime</td>
+            <td style="font-size: 20px;"><%= uptime %></td>
+          </tr>
+          <tr class="text-center slide-up-fade-in">
+            <td style="font-size: 20px;">♢ Shards</td>
+            <td style="font-size: 20px;"><%= bot.shard.count %></td>
+          </tr>
+          <tr class="text-center slide-up-fade-in">
+            <td style="font-size: 20px;"><i class="fas fa-signal"></i></i> Créé le</td>
+            <td style="font-size: 20px;">25 mars 2020 à 13:31:49</td>
+          </tr>
+          <tr class="text-center slide-up-fade-in">
+            <td style="font-size: 20px;"><i class="fas fa-table-tennis"></i> Ping (Latency)</td>
+            <td style="font-size: 20px;"><%= bot.ws.ping %>ms</td>
+          </tr>
+          <tr class="text-center slide-up-fade-in">
+            <td style="font-size: 20px;"><i class="fab fa-discord"></i> Discord.js Version</td>
+            <td style="font-size: 20px;">v12.5.3</td>
+          </tr>
+          <tr class="text-center slide-up-fade-in">
+            <td style="font-size: 20px;"><i class="fab fa-node"></i> Node.js Version</td>
+            <td style="font-size: 20px;"><%= process.version %></td>
+          </tr>     
+          <tr class="text-center slide-up-fade-in">
+            <td style="font-size: 20px;"><i class="fab fa-node"></i> Version du bot</td>
+            <td style="font-size: 20px;">2.4.25</td>
+          </tr>  
+          <tr class="text-center">
+            <td style="font-size: 20px;"><i class="fas fa-laptop"></i> Usage</td>
+            <td style="font-size: 20px;">
+                <ul>
+                    <li>Memory: <%= (process.memoryUsage().rss / 1024 / 1024).toFixed(2) %> MB</li>
+                    <li>CPU: <%= (process.cpuUsage().system / 1024 / 1024).toFixed(2) %>%</li>
+                    <li>Node CPU: <%= (process.cpuUsage().user / 1024 / 1024).toFixed(2) %>%</li>
+                </ul>
+            </td>
+          </tr>                                   
+      </tbody>
+  </table>
+</div>
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+
+<!-- if you would like to add a footer, use: include("partials/footer") like the header one at the top of the code. -->
+<%- include("./partials/footer") -%>

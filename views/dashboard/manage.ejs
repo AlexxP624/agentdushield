@@ -1,0 +1,56 @@
+<script src="https://kit.fontawesome.com/794c269344.js" crossorigin="anonymous"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Meta Tags-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        <link rel="stylesheet" href="/index.css">
+        <title><%= bot.name %> | Mes Serveurs</title>
+        <link rel="shortcut icon" href="<%= bot.avatar %>">
+          </a>
+    </head>
+    
+
+<%- include("../partials/header") %>
+
+<title>Manage <%= guild.name %> » <%= bot.user.username %> Dashboard</title>
+
+<div class="text-center text-light slide-up-fade-in" style="padding-top: 65px; padding-bottom: 20px;">
+    <div class="p-5 text-center" style="padding-top: 110px; background-color: #3B465E;">
+        <% if (guild.icon) { %>
+            <img class="rounded-circle" width="140px" style="opacity: 1;" src="https://cdn.discordapp.com/icons/<%= guild.id %>/<%= guild.icon %>?size=512"> 
+        <% } else { %>
+            <img class="rounded-circle" width="84px" style="opacity: 1;" src="https://discordapp.com/assets/6debd47ed13483642cf09e832ed0bc1b.png?size=2048"> 
+        <% } %>
+        <br>
+        <br>
+        <h1 class="mb-3">Modife <%= guild.name %></h1>
+    </div>
+</div>
+
+<!-- Ik this is not the prettiest list but it shows the servers correctly. -->
+<div class="container text-light slide-up-fade-in">
+    <form role="form" action="/dashboard/server/<%= guild.id %>" method="POST">
+        <div class="mb-3">
+            <label for="prefix" class="form-label text-light">Prefix</label>
+            <input type="text" class="form-control" name="prefix" placeholder="<%= settings.prefix %>">
+            <br>
+            <label for="embed color" class="form-label text-light">Embed-Color</label>
+            <input type="embedcolor" class="form-control" name="embedcolor" placeholder="<%= settings.embedcolor %>">
+            <br>
+            <button type="submit" class="btn btn-success"><i class="fas fa-paper-plane"></i> Sauvgarder</button>
+            <br>
+            <small>La page se rechargera après avoir cliqué sur le bouton Sauvgarder.</small>
+
+        </div>
+        <br>
+        <br>
+    </form>
+
+</div>
+</body>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>

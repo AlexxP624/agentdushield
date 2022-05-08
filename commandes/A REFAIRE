@@ -1,0 +1,45 @@
+const Discord  = require('discord.js');
+const ms = require('ms');
+const { stripIndents } = require("common-tags");
+const db = require('quick.db')
+
+
+module.exports = {
+    name: "tempmute",
+    description: "Permet de tempmute l'utilisateur mentionné",
+    usage: ".tempmute <@user> <temps>",
+    run: async (client, message, args) => {
+      const color = db.get(`color_${message.guild.id}`)
+        if(message.channel.type === "dm") return;
+        if (message.author.bot) return;
+        if(!message.member.hasPermission("MANAGE_ROLES")) return message.reply(":x: Vous n'avez pas la permission !")
+    
+        //.tempmute @user 1s/m/h/d
+    
+        let tomute = message.mentions.members.first();
+        if(!tomute) return message.reply("❌ Impossible de trouver l'utilisateur !");
+      if(!message.guild.me.hasPermission("MANAGE_ROLE")) return message.reply("❌ Je n'est pas la permission de ajouté un rôle !");
+      let muterole = message.mentions.roles.first()
+        //end of create role
+        let mutetime = args[2]
+        if(!mutetime) return message.reply("❌ Veuillez presiser le temps !");
+    
+        await(tomute.roles.add(muterole.id));
+//        message.reply(`✅ <@${tomute.id}> a été mute pendant ${ms(ms(mutetime))}, avec succès !`)
+        setTimeout(function(){
+            tomute.roles.remove(muterole.id);
+            message.channel.send(`Le temprole de <@${tomute.id}> a été enlevé ! Il avait le rôle ${muterole}`);
+        }, ms(mutetime));
+    
+        var embed = new Discord.MessageEmbed()
+            .setColor(`${color || "BLACK"}`)
+            .setDescription(`<@${tomute.id}> à reçu pendant **${ms(ms(mutetime))}** le rôle **${muterole}** par **${message.author.username}**`)
+            message.channel.send(embed); 
+    
+        //end of module
+    }
+}
+
+module.exports.help = {
+    name: "temprole"
+}

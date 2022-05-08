@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="google-site-verification" content="IQO6LDURXJ7AvaaszluuCUG5-vFfrrQeS2cpD7HKuE8" />
+    <title translate="no">Agent Du Shield | Page D'accueil</title>
+    <meta name="og:title" content="Agent Du Shield | Page D'accueil" />
+    <link rel="og:icon" href="../../static/images/logo.png" type="image/x-icon">
+    <meta name="og:url" content="https://agentdushield.tk" />
+    <meta name="og:description" content="Agent Du Shield est un bot de Gestion de serveur Discord, il vous permet de gerer votre Discord depuis le bot ( logs, musique, modération ) 100% Français">
+  <meta property="og:image" content="../../static/ilages/logo.png">
+    <meta name="og:url" content="https://agentdushield.tk" />
+    <meta name="description" content="Agent Du Shield est un bot de Gestion de serveur Discord, il vous permet de gerer votre Discord depuis le bot ( logs, musique, modération ) 100% Français">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Agent Du Shield | Page D'accueil">
+    <meta name="twitter:description" content="Agent Du Shield est un bot de Gestion de serveur Discord, il vous permet de gerer votre Discord depuis le bot ( logs, musique, modération ) 100% Français">
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Karla&family=Montserrat&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="/css/custom.css">
+
+    <nav class="navbar navbar-expand-lg shadow navbar-dark" style="background-color: #7289da;">
+        <a class="navbar-brand" href="/">
+              <img src="https://cdn.discordapp.com/avatars/877177600307511386/0889ff442d08303956e61dd7f2b3d020.webp" alt="Agent Du Shield" width="30" height="30" class="d-inline-block align-top">
+                <b>Agent Du Shield</b>
+            </a>
+            <button aria-controls="ntoggle" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#ntoggle" data-bs-toggle="collapse" type="button">
+      <span class="navbar-toggler-icon">
+        </span>
+      </button>
+            
+      <div class="collapse navbar-collapse" id="ntoggle">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                     <% if (user) { %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"><i class="fas fa-home"></i>
+                    | Accueil</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="/stats"><i class="fas fa-signal"></i></i>
+                    | Stats</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/invite"><i class="fas fa-robot"></i>
+                    | Invitation du Bot</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/support" target="_BLANK"><i class="fab fa-discord"></i>
+                    | Serveur Officiel</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/autres"><i class="fas fa-align-center"></i>
+                    | Autres Infos</a>
+                    </li>
+                </ul>
+            <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                            <img src="https://cdn.discordapp.com/avatars/<%= user.id %>/<%= user.avatar %>" class="rounded-circle" height="42" alt="Avatar"/> <span style="padding-left: 10px;"><%= user.username %>#<%= user.discriminator %></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><h6 class="dropdown-header">Menu</h6></li>
+                            <li><a class="dropdown-item" href="/dashboard/servers"><i class="fas fa-server"></i> | Mes Serveurs</a></li>
+                            <li><a class="dropdown-item" href="/dashboard/profile"><i class="fas fa-id-card"></i> | Mon Profile</a></li>
+                            <hr>
+                            <li><a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt"></i> | Déconnexion</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+        <% } else { %>
+        
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"><i class="fas fa-home"></i>
+                    | Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/invite"><i class="fas fa-robot"></i>
+                    | Invitation du Bot</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                    <a class="nav-link" href="/support" target="_BLANK"><i class="fab fa-discord"></i>
+                    | Serveur Officiel</a>
+                    </li>
+                      <li class="nav-item">
+                    <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt"></i> | Se Connecter</a>
+                          </li>
+                        </ul>
+        <% } %>
+            </div>
+        </div>
+    </nav>
+</head>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.js"></script>
+
+<body>
+
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+    /*Background of the nav bar */
+:root {
+	--background: #0b1622;
+  --header: #151f2e;
+  --iconcolor: #85b2f7
+}
+.navbar-dark {
+      background-color: var(--header);
+}
+.navbar-brand {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+  .nav-head {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 2rem;
+    display: none;
+  }
+ .active {
+    color: rgb(166 168 253);
+  }
+/*Color of the login button */
+  form.d-flex button {
+     font-family: 'Josefin Sans', sans-serif;
+    background-color: rgb(121 145 246);
+    color: white;
+    outline: none;
+    border: none;
+}
+/* Color of the login button on hover */
+form.d-flex button:hover {
+    background-color: rgb(166 168 253);
+}
+li {
+  font-family: 'Josefin Sans', sans-serif;
+  padding-top: 5px;
+}
+#nav-list {
+  transform: none;
+}
+.nav-link {
+  background-color: var(--background);
+  padding-right: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+@media (min-width: 992px) {
+.nav-head {
+  display: block;
+}
+.nav-link {
+  background-color: transparent;
+  padding-right: none;
+  text-align: left;
+  border-radius: none;
+}
+#nav-list {
+  transform: translateY(-10%);
+}
+}
+::-webkit-scrollbar {
+    width: 3px;
+}
+ 
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: #02a9ff; 
+}
+</style>
+
+<script>
+export default {
+  mounted() {
+    let element = document.getElementById("nav-list").getElementsByClassName("nav-link")
+    for (var i=0;i<=element.length-1;i++) {
+      if(document.location.href.includes(document.getElementById("nav-list").getElementsByClassName("nav-link")[i].innerHTML.replace(/\n| /g, "").toLowerCase())) return element[i].classList.add("active")
+    }
+  }
+}
+</script>

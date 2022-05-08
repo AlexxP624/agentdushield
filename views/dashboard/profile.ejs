@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Meta Tags-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        <link rel="stylesheet" href="/index.css">
+        <title>Agent Du Shield | Page D'accueil</title>
+        <link rel="shortcut icon" href="">
+          </a>
+    </head>
+    <body>
+
+<%- include("../partials/header") %>
+
+<style>
+.statusColor {
+    color: <%= status %>;
+}
+</style> <!-- Please ignore the Syntax Error here. If there is a fix for this, please send a PR. -->
+
+<div class="text-center text-light slide-up-fade-in" style="padding-top: 65px; padding-bottom: 20px;">
+    <div class="p-5 text-center" style="padding-top: 110px; background-color: #3B465E;">
+        <img class="img-fluid rounded-circle" src="https://cdn.discordapp.com/avatars/<%= user.id %>/<%= user.avatar %>" width="128px" height="auto">
+        <br>
+        <br>
+        <h1 class="mb-3"><%= user.username %>#<%= user.discriminator %> <i class="fas fa-circle statusColor fa-xs"></i></h1>
+    </div>
+</div>
+
+<div class="container">
+    <table class="table text-light slide-up-fade-in">
+        <thead class="thead text-center text-light mdb-color lighten-1 lighten-1">
+            <tr>
+            <th style="font-size: 20px;" scope="col">Type</th>
+            <th style="font-size: 20px;" scope="col">Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="text-center">
+                <td style="font-size: 20px;"><i class="fas fa-users"></i> ID</td>
+                <td style="font-size: 20px;"><%= user.id %></td>
+            </tr>
+            <tr class="text-center">
+                <td style="font-size: 20px;"><i class="fas fa-hashtag"></i> Tag</td>
+                <td style="font-size: 20px;">#<%= user.discriminator %></td>
+            </tr>
+            <tr class="text-center">
+                <td style="font-size: 20px;"><i class="fas fa-flag"></i> Badges</td>
+                <td style="font-size: 20px;"><%= userFlags %></td>
+            </tr>
+            <tr class="text-center">
+                <td style="font-size: 20px;"><i class="fas fa-calendar"></i> Compte Créé Le</td>
+                <td style="font-size: 20px;"><%= moment(userObj.createdAt).format("LLLL") %></td>
+            </tr>
+            <tr class="text-center">
+                <td style="font-size: 20px;"><i class="fab fa-discord"></i> Status</td>
+                <td style="font-size: 20px;"><i class="fas fa-circle statusColor fa-xs"></i> <%= statusName %></td>
+            </tr>
+            <tr class="text-center">
+                <td style="font-size: 20px;"><i class="fas fa-gamepad"></i> Joue à</td>
+                <td style="font-size: 20px;"><%= userObj.presence.activities ? userObj.presence.activities.name : 'Ne Joue Pas/Stream' %></td>
+            </tr>
+            <tr class="text-center">
+                <td style="font-size: 20px;"><i class="fab fa-discord"></i> Abonnement</td>
+                <td style="font-size: 20px;"><%= userSubscription %></td>
+            </tr>    
+            <tr class="text-center">
+                <td style="font-size: 20px;"><i class="fas fa-shield-alt"></i> A2F</td>
+                <td style="font-size: 20px;"><%= user.mfa_enabled ? "Oui" : "Non" %></td>
+            </tr>                                 
+        </tbody>
+    </table>
+    </body>
+</div>
+
+<%- include("../partials/footer") %>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>

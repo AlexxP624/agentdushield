@@ -1,0 +1,19 @@
+<%- include("partials/headerm") %>
+
+<title>Acceuil | <%= bot.user.username %></title>
+
+<div class="container text-center text-light" style="padding-top: 110px; padding-bottom: 20px;">
+    <% if (user) { %>
+        <img class="img-fluid rounded" src="https://cdn.discordapp.com/avatars/<%= user.id %>/<%= user.avatar %>" width="128px" height="auto">
+        <br>
+        <br>
+    <% } else { %>
+        <img class="img-fluid rounded" src="<%= bot.user.displayAvatarURL({dynamic: true, size: 128}) %>" width="128px" height="auto">
+        <br>
+        <br>
+        <h1><%= bot.user.username %> Dashboard</h1>
+        <p>Le site est actuellement en maintenance.</p>   
+    <% } %>
+</div>
+
+<!-- if you would like to add a footer, use: include("partials/footer") like the header one at the top of the code. -->

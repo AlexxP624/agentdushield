@@ -1,0 +1,26 @@
+body {
+	background-color: #23272A;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat" !important;
+}
+
+p, div {
+    font-family: "Karla" !important;
+}
+
+.slide-up-fade-in{
+    animation: slide-up-fade-in ease 1.5s;
+}
+
+@keyframes slide-up-fade-in{
+    0% {
+        opacity:0;
+        transform:  translate(0px,40px)  ;
+    }
+    100% {
+        opacity:1;
+        transform:  translate(0px,0px)  ;
+    }
+}
